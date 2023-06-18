@@ -11,7 +11,7 @@ jobs:
             command: |
               echo "$DOCKERHUB_PASSWORD" | docker login --username $DOCKERHUB_USERNAME --password-stdin
         - run:
-            name: Push udagram-api-feed to Dockerhub
+            name: Deploy udagram-api-feed to Dockerhub
             command: |
               docker build -t udagram-api-feed ./udagram-api-feed
               docker tag udagram-api-feed khoitha/udagram-api-feed:v1
